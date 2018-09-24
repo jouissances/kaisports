@@ -1,0 +1,289 @@
+@font-face {
+    font-family: 'Decima Mono';
+    src: url('../fonts/decima__mono_light-webfont.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SF Sports Night';
+    src: url('../fonts/SFSportsNight.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SF-Pro-Display-Bold.otf') format('opentype');
+}
+
+body {
+    background-color: #1A1A1A;
+}
+
+* {
+    font-family: 'Decima Mono';
+    font-size: 16px; 
+    color: #ffffff;  
+    line-height: 1.5;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    position: relative;
+    top: 15px;
+    z-index: 1;
+}
+
+    header div a.logo {
+        font-family: 'SF Sports Night';
+        font-size: 1.75rem;
+        letter-spacing: 0.1em;
+        margin-left: 45px;
+        color: #C8A73F;
+        text-decoration: none;
+    }
+
+    header nav {
+        margin-right: 30px;
+    }
+
+    header nav a {
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 12px;
+        /* margin: 0 15px; */
+    }
+
+    header nav::after {
+        display: block;
+        content: '';
+    }
+
+    header nav ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    header nav ul li {
+        float: left;
+        position: relative;
+    }
+
+    header nav ul li a {
+        display: block;
+        color: rgba(255, 255, 255, .9);
+        text-decoration: none;
+        padding: 0.75rem 1.2rem;
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+        transition: all .3s ease-in-out;
+    }
+
+    header nav ul li a:not(:only-child)::after {
+        padding-left: 4px;
+        content: ' ▾';
+    }
+
+    header nav ul li ul li {
+        min-width: 150px;
+        text-align: right;
+    }
+
+    header nav ul li ul li a {
+        background: transparent;
+        color: #000;
+        border-bottom: 1px solid #DDE0E7;
+    }
+
+    header nav ul li ul li a:hover,
+    header nav ul li ul li a:focus {
+        background: #eee;
+        color: #111;
+    }
+
+    header ul.dropdown {
+        display: none;
+        position: absolute;
+        right: 10px;
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(10, 20, 30, .4);
+    }
+
+section.hero {
+    text-transform: uppercase;
+    position: relative;
+    top: -100px;
+    background-image: url('../images/image.png');
+    background-size: cover;
+    height: 100vh;
+}
+
+    section.hero h1 {
+        font-family: 'SF Pro Display';
+        font-size: 3.5rem;
+        text-shadow: 1px 1px #ffffff;
+        line-height: 1;
+        width: 60%;
+        padding-top: 200px;
+        margin-left: 45px;
+        z-index: 3;
+    }
+
+        section.hero div.caption p {
+            font-size: 12px;
+            position: relative;
+            top: -30px;
+            margin-left: 45px;
+        }
+
+            section.hero div.caption p i {
+                font-size: 10px;
+                color: #C8A73F;
+            }
+
+section.options {
+    height: 100vh;
+    width: 100vw;
+}
+
+    section.options h2 {
+        text-align: center;
+        font-size: 14px;
+    }
+
+    section.options div.grid {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 0 100px;
+    }
+
+        section.options div.grid div.box {
+            width: 28%;
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 10px;
+            transition: all 0.4s ease-in;
+        }
+
+                section.options div.grid div.box:hover {
+                    background: #C8A73F;
+                    border-radius: 5px;
+                }
+
+            section.options div.grid div.box img {
+                width: 125px;
+                height: 125px;
+            }
+
+            section.options div.grid div.box h3 {
+                font-family: 'SF Pro Display';
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 1.2px;
+            }
+
+section.description {
+    height: 20vh;
+    position: relative;
+    top: -100px;
+    margin-bottom: 50px;
+}
+
+    section.description p {
+        text-align: center;
+        font-size: 14px;
+        width: 60%;
+        margin: 0 auto;
+    }
+
+section.form {
+    height: 30vh;
+    text-align: center;
+    position: relative;
+    top: -80px;
+}
+
+    section.form h2 {
+        font-size: 14px;
+    }
+
+    section.form form input {
+        display: block;
+        width: 40%;
+        margin: 10px auto;
+        padding: 5px 20px;
+        background-color: #1A1A1A;
+        font-size: 14px;
+    }
+
+        section.form form input[type="submit"] {
+            width: auto;
+            margin-top: 15px;
+            padding: 5px 10px;
+            background-color: #000000;
+            border: none;
+            transition: all 300ms ease-out;
+        }
+
+            section.form form input[type="submit"]:hover {
+                background-color: #C8A73F;
+                color: #000000;
+                cursor: pointer;
+            }
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    padding: 0 30px;
+    background-color: #C8A73F;
+    text-transform: uppercase;
+}
+
+    footer p, 
+    footer a {
+        display: inline;
+        font-size: 12px;
+    }
+
+    footer p {
+        margin: 0 10px;
+    }
+
+    footer a {
+        margin: 0 5px;
+    }
+
+    footer div.social {
+        display: flex;
+        align-items: center;
+    }
+
+section#what {
+    padding-top: 100px;
+}
+
+section#what,
+section#why,
+section#who {
+    height: 40vh;
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+section#what h1,
+section#why h1,
+section#who h1 {
+    font-size: 18px;
+}
+
+section#what p,
+section#why p,
+section#who p {
+    font-size: 14px;
+}
